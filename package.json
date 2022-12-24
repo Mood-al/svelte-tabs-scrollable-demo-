@@ -19,6 +19,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-tabs-scrollable": "^0.0.3"
+		"svelte-tabs-scrollable": "^0.0.4"
 	}
 }
