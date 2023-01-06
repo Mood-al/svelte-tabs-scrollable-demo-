@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap');
+
+:root {
+	--rts-primary-color: rgba(253, 158, 2, 1);
+	---rts-faded-color: rgba(253, 158, 2, 0.7);
+	--rts-gray-color: #ddd;
+	--rts-white-color: #fff;
+}
+
+body {
+	font-family: 'Raleway', 'Changa', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+footer {
+	margin-top: auto;
+}
+a {
+	text-decoration: none;
+	color: var(--sts-white-color);
+}
+.nav svg {
+	fill: var(--sts-white-color);
+}
+/* rewrite bootstrap default styles */
+.btn-check:focus,
+.btn:focus,
+.form-control:focus,
+.form-check-input:focus {
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem rgba(253, 158, 2, 0.25);
+	border-color: var(--sts-primary-color);
+}
+.form-check-input:checked {
+	background-color: var(--sts-primary-color);
+	border-color: var(--sts-primary-color);
+}
+.btn {
+	cursor: pointer;
+	background-color: transparent;
+	border-radius: 40px;
+	border: 2px solid var(--sts-gray-color);
+	transition: 0.3s all;
+}
+input {
+	border-radius: 40px !important;
+}
+.bg-primary {
+	background-color: var(--sts-primary-color) !important;
+}
+.form-switch .form-check-input:focus {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(253, 158, 2, 0.25)'/%3e%3c/svg%3e");
+	/* background-image: url(data:image/svg+xml,3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8' circle r='3' fill='2386b7fe'); */
+}
+.form-switch .form-check-input:checked {
+	background-position: right center;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+/* from animate.css */
+.animate__animated {
+	-webkit-animation-duration: 300ms;
+	animation-duration: 300ms;
+
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.sts___tab___selected {
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(253, 158, 2, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+.animate__fadeInLeft {
+	-webkit-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+}
+
+.form-select.sts___btn {
+	color: var(--sts-white-color);
+	border-color: var(--sts-faded-color);
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+.form-select:focus {
+	border-color: var(---rts-faded-color);
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem rgb(255 237 204 / 68%);
+}

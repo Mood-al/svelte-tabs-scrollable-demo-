@@ -1,74 +1,86 @@
 <script>
-	// @ts-nocheck
-
 	import Tabs from 'svelte-tabs-scrollable/Tabs.svelte';
 	import Tab from 'svelte-tabs-scrollable/Tab.svelte';
+	import { t } from '../i18n';
+	import { isRTL } from '../isRTL';
+	import CustomNavBtns from '../components/CustomNavBtns.svelte';
+	import ControlTabs from '../components/ControlTabs.svelte';
+	import DirectionSwitcher from '../components/DirectionSwitcher.svelte';
+	import SwitchInputFeatures from '../components/SwitchInputFeatures.svelte';
+	import TabsMeta from '../components/TabsMeta.svelte';
+	import InputFeatures from '../components/InputFeatures.svelte';
+	import SelectedTabPositionRadios from '../components/SelectedTabPositionRadios.svelte';
 
-	let isRTL = false;
-	const onClick = () => {
-		isRTL = !isRTL;
-	};
-	let activeTab = 13;
+	let activeTab = 24;
 	const onTabClick = (e, index) => {
-		console.log(index);
+		// console.log(index);
+		activeTab = index;
 	};
-	$: {
-		if (typeof window !== 'undefined') {
-			const body = window.document.body;
-			isRTL ? (body.dir = 'rtl') : (body.dir = 'ltr');
-		}
-	}
+
 	let goToEnd;
 	let goToStart;
+	let onLeftBtnClick;
+	let onRightBtnClick;
 	let showTabsScroll = false;
 	let hideNavBtns = false;
+	let hideNavBtnsOnMobile = !hideNavBtns;
+	let isLeftArrowDisapled;
+	let isRightArrowDisapled;
+	let animationDuration = 300;
+	let tabsScrollAmount = 3;
+	let selectedTabPosition = {};
 	const didReachEnd = (val) => {
+		isRightArrowDisapled = val;
 		// sets if the tabs reached the end point of the tab's container
 	};
 	const didReachStart = (val) => {
+		isLeftArrowDisapled = val;
 		// sets if the tabs reached the start point of the tab's container
 	};
+	$: console.log(selectedTabPosition);
 </script>
 
 <!-- I couldn't add comments between the <Tabs/>'s props -_- -->
-<Tabs
-	{activeTab}
-	{onTabClick}
-	bind:goToEnd
-	bind:goToStart
-	{isRTL}
-	{didReachStart}
-	{didReachEnd}
-	scrollSelectedToCenterOfView={false}
-	scrollSelectedToEndOfView={false}
-	animationDuration={300}
-	hideNavBtnsOnMobile={true}
-	{showTabsScroll}
-	{hideNavBtns}
-	tabsClassName="ss"
-	tabsContainerClassName="ss"
->
-	{#each [...Array(33).keys()] as item}
-		<Tab>
-			tab {item}
-		</Tab>
-	{/each}
-</Tabs>
-
-<button on:click={() => goToEnd()}>go to end</button>
-<button on:click={() => goToStart()}>go to start</button>
-<button on:click={onClick}>{isRTL ? 'RTL' : 'LTR'}</button>
-<div style="border : 1px solid #000; display: inline-block">
-	<input bind:checked={showTabsScroll} type="checkbox" id="showTabsScroll" />
-	<label for="showTabsScroll"> showTabsScroll : {showTabsScroll} </label>
+<div class="p-2 shadow-sm sticky-top bg-white">
+	<Tabs
+		{activeTab}
+		{onTabClick}
+		bind:goToEnd
+		bind:goToStart
+		bind:onLeftBtnClick
+		bind:onRightBtnClick
+		isRTL={$isRTL}
+		{didReachStart}
+		{didReachEnd}
+		{animationDuration}
+		{tabsScrollAmount}
+		{hideNavBtnsOnMobile}
+		{showTabsScroll}
+		{hideNavBtns}
+		tabsClassName="ss"
+		tabsContainerClassName="container"
+		{...selectedTabPosition}
+	>
+		{#each [...Array(33).keys()] as item}
+			<Tab>
+				{$t('tab')}
+				{item}
+			</Tab>
+		{/each}
+	</Tabs>
 </div>
-<div style="border : 1px solid #000; display: inline-block">
-	<input bind:checked={hideNavBtns} type="checkbox" id="hideNavBtns" />
-	<label for="hideNavBtns"> hideNavBtns : {hideNavBtns}</label>
+<div class="container">
+	<CustomNavBtns
+		title={$t('control_tabs')}
+		{onLeftBtnClick}
+		{onRightBtnClick}
+		{isLeftArrowDisapled}
+		{isRightArrowDisapled}
+	/>
+	<DirectionSwitcher />
+	<ControlTabs {goToEnd} {goToStart} {isLeftArrowDisapled} {isRightArrowDisapled} />
+	<SwitchInputFeatures bind:showTabsScroll bind:hideNavBtns bind:hideNavBtnsOnMobile />
+	<TabsMeta {isLeftArrowDisapled} {isRightArrowDisapled} {activeTab} />
+	<InputFeatures bind:animationDuration bind:tabsScrollAmount />
+	<SelectedTabPositionRadios title={`Selected tab positioning`} bind:selectedTabPosition />
 </div>
-<h3>
-	I'm working now on the demo and on adding the API to the component. if you want to see demos on
-	react-tabs-scrollable please visit this <a nopo href="https://react-tabs-scrollable.vercel.app/"
-		><h2>Website</h2></a
-	> until i can finish the svelte one, they both have the same features and functionality.
-</h3>
