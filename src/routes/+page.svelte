@@ -37,7 +37,6 @@
 		isLeftArrowDisapled = val;
 		// sets if the tabs reached the start point of the tab's container
 	};
-	$: console.log(selectedTabPosition);
 </script>
 
 <!-- I couldn't add comments between the <Tabs/>'s props -_- -->
