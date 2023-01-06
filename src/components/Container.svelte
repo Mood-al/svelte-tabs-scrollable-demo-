@@ -25,7 +25,14 @@
 		transform: scale(1);
 		animation: pulse-black 2s infinite;
 	}
-
+	@media (max-width: 575.98px) {
+		.display-5 {
+			font-size: 1.5rem !important;
+		}
+		.fs-6 {
+			font-size: 0.7rem !important;
+		}
+	}
 	@keyframes pulse-black {
 		0% {
 			transform: scale(0.95);
