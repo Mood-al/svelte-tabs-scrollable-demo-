@@ -1,14 +1,25 @@
 <script>
+	import { t } from '../i18n';
 	import Container from './Container.svelte';
+	import AnimatedPostioningBadge from './AnimatedPostioningBadge.svelte';
 
 	export let title;
 	export let selectedTabPosition = {};
+	let clicked = false;
+	let time = 4000;
+
 	const onRadioChange = (e) => {
+		clicked = true;
 		selectedTabPosition = { [e.target.value]: true };
+		if (clicked) {
+			setTimeout(() => {
+				clicked = false;
+			}, time);
+		}
 	};
 </script>
 
-<Container {title} badge={'New'}>
+<Container {title} badge={$t(`new`)}>
 	<div class="row">
 		<div class="col-md-4">
 			<div class="form-check">
@@ -25,6 +36,10 @@
 					scrollSelectedToStartOfView (Default)</label
 				>
 			</div>
+			<AnimatedPostioningBadge
+				{clicked}
+				selectedTabPosition={selectedTabPosition['scrollSelectedToStartOfView']}
+			/>
 		</div>
 		<div class="col-md-4">
 			<div class="form-check">
@@ -40,6 +55,10 @@
 					scrollSelectedToCenterOfView</label
 				>
 			</div>
+			<AnimatedPostioningBadge
+				{clicked}
+				selectedTabPosition={selectedTabPosition['scrollSelectedToCenterOfView']}
+			/>
 		</div>
 		<div class="col-md-4">
 			<div class="form-check">
@@ -55,6 +74,10 @@
 					scrollSelectedToEndOfView
 				</label>
 			</div>
+			<AnimatedPostioningBadge
+				{clicked}
+				selectedTabPosition={selectedTabPosition['scrollSelectedToEndOfView']}
+			/>
 		</div>
 	</div>
 </Container>

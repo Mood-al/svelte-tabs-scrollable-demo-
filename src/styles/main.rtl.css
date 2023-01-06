@@ -1,0 +1,20 @@
+.rtl .form-switch .form-check-input {
+	margin-right: -2.5em;
+	margin-left: unset;
+}
+.rtl .form-check .form-check-input {
+	float: right;
+}
+.rtl .form-check .form-check-input[type='radio'] {
+	margin-right: -1.5em;
+	margin-left: unset;
+}
+.rtl .form-check {
+	padding-left: unset;
+	padding-right: 2.5rem;
+}
+
+.rtl span.s-9tLSnsUl7Fr2 {
+	left: -40px;
+	right: unset;
+}

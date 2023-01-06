@@ -81,5 +81,5 @@
 	<SwitchInputFeatures bind:showTabsScroll bind:hideNavBtns bind:hideNavBtnsOnMobile />
 	<TabsMeta {isLeftArrowDisapled} {isRightArrowDisapled} {activeTab} />
 	<InputFeatures bind:animationDuration bind:tabsScrollAmount />
-	<SelectedTabPositionRadios title={`Selected tab positioning`} bind:selectedTabPosition />
+	<SelectedTabPositionRadios title={$t(`selectedPostioning`)} bind:selectedTabPosition />
 </div>

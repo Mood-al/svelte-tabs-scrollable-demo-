@@ -3,6 +3,7 @@
 	import Navbar from '../components/Navbar.svelte';
 	import '../styles/bootstrap.min.css';
 	import '../styles/main.css';
+	import '../styles/main.rtl.css';
 </script>
 
 <Navbar />

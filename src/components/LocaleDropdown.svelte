@@ -6,6 +6,7 @@
 			const body = document.body;
 
 			$isRTL ? (body.dir = 'rtl') : (body.dir = 'ltr');
+			$isRTL ? body.classList.add('rtl') : body.classList.remove('rtl');
 		}
 	}
 	const langs = {
