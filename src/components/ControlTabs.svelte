@@ -11,7 +11,7 @@
 	<div class="col-md-6 d-flex">
 		<button
 			class="flex-fill btn rn___btn"
-			disabled={isLeftArrowDisapled}
+			disabled={isRightArrowDisapled}
 			on:click={() => goToStart()}
 		>
 			{$t(`go_to_start`)}
@@ -20,7 +20,7 @@
 	<div class="col-md-6 d-flex">
 		<button
 			class="flex-fill btn rn___btn mt-md-0 mt-2"
-			disabled={isRightArrowDisapled}
+			disabled={isLeftArrowDisapled}
 			on:click={() => goToEnd()}
 		>
 			{$t(`go_to_end`)}
