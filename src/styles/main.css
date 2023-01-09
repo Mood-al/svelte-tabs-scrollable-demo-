@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap');
 
 :root {
-	--rts-primary-color: rgba(253, 158, 2, 1);
-	---rts-faded-color: rgba(253, 158, 2, 0.7);
-	--rts-gray-color: #ddd;
-	--rts-white-color: #fff;
+	--sts-primary-color: #fd9e02;
+	---sts-faded-color: rgba(253, 158, 2, 0.7);
+	--sts-gray-color: #ddd;
+	--sts-white-color: #fff;
 }
 
 body {
@@ -117,14 +117,48 @@ input {
 	-webkit-animation-name: fadeInLeft;
 	animation-name: fadeInLeft;
 }
+.sts___btn {
+	cursor: pointer;
+	background-color: transparent;
+	border-radius: 40px;
+	border: 2px solid var(--sts-gray-color);
+}
 
 .form-select.sts___btn {
 	color: var(--sts-white-color);
 	border-color: var(--sts-faded-color);
+	/* border-radius: 10; */
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
 }
+
 .form-select:focus {
 	border-color: var(---rts-faded-color);
 	outline: 0;
 	box-shadow: 0 0 0 0.25rem rgb(255 237 204 / 68%);
+}
+
+.btn-check:active + .btn-outline-secondary,
+.btn-check:checked + .btn-outline-secondary,
+.btn-outline-secondary.active,
+.btn-outline-secondary.dropdown-toggle.show,
+.btn-outline-secondary:active {
+	color: #fff;
+	background-color: var(--sts-primary-color);
+	border-color: var(--sts-primary-color);
+}
+.btn-outline-secondary:hover {
+	color: #fff;
+	background-color: var(---sts-faded-color);
+	border-color: var(---sts-faded-color);
+}
+.text-warning {
+	color: var(--sts-primary-color) !important;
+}
+
+.btn-check:active + .btn-outline-secondary:focus,
+.btn-check:checked + .btn-outline-secondary:focus,
+.btn-outline-secondary.active:focus,
+.btn-outline-secondary.dropdown-toggle.show:focus,
+.btn-outline-secondary:active:focus {
+	box-shadow: 0 0 0 0.25rem rgb(229 229 229 / 50%);
 }

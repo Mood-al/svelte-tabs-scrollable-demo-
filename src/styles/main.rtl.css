@@ -18,3 +18,41 @@
 	left: -40px;
 	right: unset;
 }
+
+/* .rtl .btn-group > :not(.btn-check) + .btn {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+} */
+/* .rtl .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+} */
+
+.rtl .btn-group > .rtl .btn-group:not(:first-child) > .btn,
+.rtl .btn-group > .btn:nth-child(n + 3),
+.rtl .btn-group > :not(.btn-check) + .btn {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+.rtl .btn-group > .btn-group:not(:last-child) > .btn,
+.rtl .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: unset;
+	border-bottom-right-radius: unset;
+}
+
+.rtl .btn-group > .btn-group:first-child > .btn,
+.rtl .btn-group > .btn:first-child:not(.dropdown-toggle) {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	border-left: 0 !important;
+}

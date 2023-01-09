@@ -23,7 +23,8 @@ function translate(locale, key, vars) {
 
 	if (!text) {
 		console.log(`no translation found for ${locale}.${key}`);
-		return;
+		text = key;
+		// return;
 	}
 
 	// // Replace any passed in variables in the translation string.

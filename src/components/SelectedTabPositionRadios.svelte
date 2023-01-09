@@ -5,17 +5,9 @@
 
 	export let title;
 	export let selectedTabPosition = {};
-	let clicked = false;
-	let time = 4000;
 
 	const onRadioChange = (e) => {
-		clicked = true;
 		selectedTabPosition = { [e.target.value]: true };
-		if (clicked) {
-			setTimeout(() => {
-				clicked = false;
-			}, time);
-		}
 	};
 </script>
 
@@ -37,7 +29,6 @@
 				>
 			</div>
 			<AnimatedPostioningBadge
-				{clicked}
 				selectedTabPosition={selectedTabPosition['scrollSelectedToStartOfView']}
 			/>
 		</div>
@@ -56,7 +47,6 @@
 				>
 			</div>
 			<AnimatedPostioningBadge
-				{clicked}
 				selectedTabPosition={selectedTabPosition['scrollSelectedToCenterOfView']}
 			/>
 		</div>
@@ -75,7 +65,6 @@
 				</label>
 			</div>
 			<AnimatedPostioningBadge
-				{clicked}
 				selectedTabPosition={selectedTabPosition['scrollSelectedToEndOfView']}
 			/>
 		</div>

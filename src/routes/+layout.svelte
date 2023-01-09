@@ -23,4 +23,16 @@
 <main class="mb-3">
 	<slot />
 </main>
+<div class="border mb-3" />
+<div class="container mb-3">
+	<div class="border-top border-bottom border-2  border-danger fs-5 p-3 text-wrap">
+		Please consider giving me a star on the <a
+			class="text-warning"
+			target="_blank"
+			rel="noopener noreferrer"
+			href="https://github.com/Mood-al/svelte-tabs-scrollable">Github</a
+		>'s repo it will give me motiviation to do more packages like this!
+	</div>
+</div>
+
 <Footer />
