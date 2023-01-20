@@ -20,6 +20,7 @@
 	"type": "module",
 	"dependencies": {
 		"bootstrap": "^5.2.3",
+		"svelte-simple-modal": "^1.4.6",
 		"svelte-tabs-scrollable": "^0.0.9"
 	}
 }

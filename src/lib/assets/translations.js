@@ -1,4 +1,29 @@
 export default {
+	ar: {
+		['control_tabs']: 'التحكم في التبويبات',
+		tab: 'تبويبة',
+		click_me_left: 'اضغط علي لتحريك التبويبات إلى اليسار',
+		click_me_right: 'اضغط علي لتحريك التبويبات إلى اليمين',
+		switch_to_mode: '{{mode}} قم بتغيير الوضع إلى',
+		go_to_start: 'حرك التبويبات إلى نقطة البداية',
+		go_to_end: 'حرك التبويبات إلى نقطة النهاية',
+		hideNavBtns: 'اخفي ازرار التنقل',
+		hideNavBtnsOnMobile: 'اخفي ازرار التنقل على شاشة النقَال',
+		showTabsScroll: 'اظهر تمرير التبويبات',
+		reachedToStart: ': وصلت إلى نقطة البداية',
+		reachedToEnd: ': وصلت إلى نقطة النهاية',
+		selectedTabIndex: ': التبويبة المختارة',
+		tabsScrollAmount: 'عدد التبويبات لكل تمريرة',
+		animationDuration: 'مدة تحريك التبويبات لكل تمرير',
+		new: 'جديد',
+		selectedPostioning: 'موضع التبويبة المختارة',
+		selectedPostioningAnimatedBadgeText: 'قم بالضغط على تبويبة ظاهرة جزءيا لرؤية التأثير',
+		copyCodesandboxLink: 'codesandbox انسخ رابط',
+		openRepl: 'Repl اعرض في',
+		showCodesandbox: 'codesandbox قم بعرض',
+
+		tabScreen: 'شاشة التبويبة'
+	},
 	en: {
 		['control_tabs']: 'Control tabs',
 		tab: 'tab',
@@ -24,31 +49,7 @@ export default {
 		showCodesandbox: 'Show codesandbox',
 		tabScreen: 'Tab screen'
 	},
-	ar: {
-		['control_tabs']: 'التحكم في التبويبات',
-		tab: 'تبويبة',
-		click_me_left: 'اضغط علي لتحريك التبويبات إلى اليسار',
-		click_me_right: 'اضغط علي لتحريك التبويبات إلى اليمين',
-		switch_to_mode: '{{mode}} قم بتغيير الوضع إلى',
-		go_to_start: 'حرك التبويبات إلى نقطة البداية',
-		go_to_end: 'حرك التبويبات إلى نقطة النهاية',
-		hideNavBtns: 'اخفي ازرار التنقل',
-		hideNavBtnsOnMobile: 'اخفي ازرار التنقل على شاشة النقَال',
-		showTabsScroll: 'اظهر تمرير التبويبات',
-		reachedToStart: ': وصلت إلى نقطة البداية',
-		reachedToEnd: ': وصلت إلى نقطة النهاية',
-		selectedTabIndex: ': التبويبة المختارة',
-		tabsScrollAmount: 'عدد التبويبات لكل تمريرة',
-		animationDuration: 'مدة تحريك التبويبات لكل تمرير',
-		new: 'جديد',
-		selectedPostioning: 'موضع التبويبة المختارة',
-		selectedPostioningAnimatedBadgeText: 'قم بالضغط على تبويبة ظاهرة جزءيا لرؤية التأثير',
-		copyCodesandboxLink: 'codesandbox انسخ رابط',
-		openRepl: 'Repl اعرض في',
-		showCodesandbox: 'codesandbox قم بعرض',
-
-		tabScreen: 'شاشة التبويبة'
-	}
+	de: {}
 };
 
 // export default translations;
