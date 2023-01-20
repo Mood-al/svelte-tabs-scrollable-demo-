@@ -1,0 +1,69 @@
+.mui-like .sts___tabs {
+	padding: 0;
+}
+.mui-like .sts___tab {
+	margin: 0;
+	position: relative;
+}
+.mui-like .sts___nav___btn svg {
+	max-width: unset;
+}
+
+.mui-like .sts___btn {
+	border-radius: unset;
+	border: none;
+}
+
+.mui-like .sts___tab::after {
+	content: '';
+	margin: auto;
+	height: 3px;
+	background: transparent;
+	transition: width 0.5s ease, background-color 0.5s ease;
+	width: 0;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.mui-like .sts___tab___selected {
+	color: #000;
+	position: relative;
+	width: 100%;
+	background: transparent;
+	box-shadow: none;
+	animation: none;
+}
+.mui-like .sts___tab___selected::after {
+	background: var(--sts-primary-color);
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+}
+.mui-like .sts___nav___btn:hover {
+	background-color: unset;
+}
+.mui-like .sts___nav___btn:hover > svg {
+	stroke: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 991.98px) {
+	.mui-like .sts___tabs___container {
+		padding: 0;
+	}
+}
+@media (max-width: 767.98px) {
+	.mui-like .sts___tab {
+		padding: 5px;
+	}
+}
+.mui-like .sts___nav___btn {
+	border: none !important;
+}
+.mui-like .sts___nav___btn:hover {
+	background-color: unset;
+	transition: 0.5s all;
+}

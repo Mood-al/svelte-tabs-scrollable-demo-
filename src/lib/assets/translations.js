@@ -21,7 +21,8 @@ export default {
 			'Now go click on a tab that partially outside the view to see the changes',
 		copyCodesandboxLink: "Copy codesandbox's link",
 		openRepl: 'Show in Repl',
-		showCodesandbox: 'Show codesandbox'
+		showCodesandbox: 'Show codesandbox',
+		tabScreen: 'Tab screen'
 	},
 	ar: {
 		['control_tabs']: 'التحكم في التبويبات',
@@ -44,7 +45,9 @@ export default {
 		selectedPostioningAnimatedBadgeText: 'قم بالضغط على تبويبة ظاهرة جزءيا لرؤية التأثير',
 		copyCodesandboxLink: 'codesandbox انسخ رابط',
 		openRepl: 'Repl اعرض في',
-		showCodesandbox: 'codesandbox قم بعرض'
+		showCodesandbox: 'codesandbox قم بعرض',
+
+		tabScreen: 'شاشة التبويبة'
 	}
 };
 
