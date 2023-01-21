@@ -166,3 +166,6 @@ input {
 .display-5 {
 	word-break: break-word;
 }
+.text-primary {
+	color: var(--sts-primary-color) !important;
+}

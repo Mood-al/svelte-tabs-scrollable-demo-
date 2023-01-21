@@ -1,5 +1,6 @@
 <script>
 	import Footer from '../components/Footer.svelte';
+	import FooterBanner from '../components/FooterBanner.svelte';
 	import Navbar from '../components/Navbar.svelte';
 	import '../styles/bootstrap.min.css';
 	import '../styles/main.css';
@@ -25,7 +26,7 @@
 </main>
 <div class="border mb-3" />
 <div class="container mb-3">
-	<div class="border-top border-bottom border-2  border-danger fs-5 p-3 text-wrap">
+	<div class="border-top border-bottom border-2 border-danger fs-5 p-3 text-wrap">
 		Please consider giving me a star on the <a
 			class="text-warning"
 			target="_blank"
@@ -35,4 +36,14 @@
 	</div>
 </div>
 
+<FooterBanner>
+	<p class="lead display-5 text-center text-white">
+		Have you checked <a
+			target="_blank"
+			rel="noopener noreferrer"
+			class="text-primary"
+			href="https://github.com/Mood-al/react-tabs-scrollable">react-tabs-scrollable</a
+		>?
+	</p>
+</FooterBanner>
 <Footer />

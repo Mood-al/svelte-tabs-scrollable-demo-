@@ -16,6 +16,7 @@
 	didReachStart={(val) => (isLeftArrowDisapled = val)}
 	bind:onLeftBtnClick
 	bind:onRightBtnClick
+	hideNavBtns={true}
 	isRTL={$isRTL}
 	{activeTab}
 >
